@@ -6,7 +6,7 @@ class loginController extends controller {
 
 		if(isset($_POST['email']) && !empty($_POST['email'])){
 			$email = addslashes($_POST['email']);
-			$pass = addslashes($_POST['password']);
+			$pass  = addslashes($_POST['password']);
 
 			$u = new Users();
 			if($u->doLogin($email, $pass)) {
@@ -23,7 +23,7 @@ class loginController extends controller {
 
 	public function logout(){
 		$u = new Users();
-		$u->setLoggedUser();
+//		$u->setLoggedUser();
 // usado para testar se o usua'rio sem permissao de logout poderia fazer logout.
 //		if($u->hasPermission('logout')) {
 			$u->logout();

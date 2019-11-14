@@ -1,16 +1,15 @@
 <?php 
 class Core {
 	public function run() {
-		//echo "URL: ".$_GET['url'];
-		
-		//formato longo mais facil de entender. So a barra acesso a pagina principal
+		// $url = explode('index.php', $_SERVER['PHP_SELF']);
+		// $url = end($url);
+
 		$url = '/';
 		if(isset($_GET['url'])){
 			$url .= $_GET['url'];
 		}
 
 		$params = array();
-
 		if(!empty($url) && $url != '/') {
  			$url = explode('/', $url);
  			array_shift($url);  		//remove o primeiro registro do array porque era a barra que foi retirada

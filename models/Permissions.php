@@ -41,4 +41,16 @@ class Permissions extends model {
 			return false;
 		}
 	}
+
+	public function getList($id_company) {
+		$retorno = array();
+		$sql = $this->db->prepare("SELECT * FROM permission_params WHERE id_company = :id_company");
+		$sql->bindValue(':id_company', $id_company);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$retorno = $sql->fetchAll();
+		}
+		return $retorno;
+	}	
 }

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Painel - <?php echo $viewData['company_name']; ?></title>
 	<!-- <link rel="stylesheet" type="text/css" href="<?php BASE_URL;?>assets/css/style.css"> -->
-	<link rel="stylesheet" type="text/css" href="<?php BASE_URL;?>assets/css/template.css">
-	<script type="text/javascript" src="<?php BASE_URL;?>assets/js/jquery-1.11.3.js"></script>
-	<script type="text/javascript" src="<?php BASE_URL;?>assets/js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/css/template.css">
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>/assets/js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>/assets/js/script.js"></script>
 </head>
 <body>
 	<div class="leftmenu">
@@ -15,7 +16,7 @@
 		<div class="menuarea">
 			<ul>
 				<li><a href="<?php echo BASE_URL; ?>">Home</a></li>
-				<li><a href="<?php echo BASE_URL; ?>permissions">Permissões</a></li>
+				<li><a href="<?php echo BASE_URL; ?>/permissions">Permissões</a></li>
 			</ul>
 		</div>
 				

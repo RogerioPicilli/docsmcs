@@ -94,4 +94,6 @@ body {
 }
 .tabbody {
 	display: none;  /*Iniciam sem mostrar nada*/
+
+	margin-top: 40px;
 }

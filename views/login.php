@@ -3,8 +3,8 @@
 <head>
 	<title>Login</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="<?php BASE_URL; ?>assets/css/login.css">
-		<link rel="stylesheet" type="text/css" href="<?php BASE_URL;?>assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/css/bootstrap.css">
 </head>
 <body>
 	<div class="loginarea">
