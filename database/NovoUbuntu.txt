@@ -1,0 +1,58 @@
+Instalacao do novo linux na aws
+
+Monstar uma EC2 com o ubuntu 18.04
+Se conectar
+
+Apache
+sudo apt-get update -y                #Verifica e instala os updates
+sudo apt-get install apache2 -y       #Instala o apache2
+sudo systemctl start apache2.service  #start o apache
+
+Para testar
+hostname -I                           #mostra o IP do servidor
+http://server_ip		      http://34.213.209.54/
+--------------------------------------------------------------------------
+
+MySql
+sudo apt-get install mysql-server -y
+y
+sudo /usr/bin/mysql_secure_installation
+1
+pass				      #a de sempre com @
+
+y
+--------------------------------------------------------------------------
+PHP
+sudo apt-get install php -y           #Instala o PHP
+sudo apt-get install -y php-{bcmath,bz2,intl,gd,mbstring,mysql,zip}
+sudo apt-get install libapache2-mod-php -y
+--------------------------------------------------------------------------
+Configurar para start automatico
+sudo systemctl enable apache2.service
+sudo systemctl enable mysql.service
+
+Restart tudo
+systemctl restart apache2.service = Melhor com o reboot
+--------------------------------------------------------------------------
+There are a set of modifications you may add to Apache. For example, one might want to take advantage of Apache's mod_rewrite module, which allows you to use regular expressions to change the destination URL, create "pretty" URLs, and more. This is accomplished via a2enmod, a command used by Apache to enable an add-on. To disable an add-on, use a2dismod in its place.
+
+For mod_rewrite, you'd use this command to enable it.
+
+sudo a2enmod rewrite
+--------------------------------------------------------------------------
+phpMyAdmin
+sudo apt install phpmyadmin php-mbstring php-gettext
+sudo phpenmod mbstring
+Restart Apache
+
+
+
+
+
+
+
+
+
+
+
+
