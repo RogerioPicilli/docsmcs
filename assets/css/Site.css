@@ -1,0 +1,51 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.foo input {
+    width: 150px;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.scrollable-panel{
+      height:445px;
+      overflow-y:auto;
+      width:100%;
+      }
+
+.scrollableg-panel{
+      height:575px;
+      overflow-y:auto;
+      width:100%;
+      }
+.foto_item {
+  width:150px;
+  height: 200px;
+  text-align: center;
+  margin-right: 10px;
+  float: left;
+}
+.foto_item img {
+  width: 150px;
+}
