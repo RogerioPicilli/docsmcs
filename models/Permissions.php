@@ -53,4 +53,20 @@ class Permissions extends model {
 		}
 		return $retorno;
 	}	
+
+	public function add($name, $id_company) {
+		$sql = $this->db->prepare("INSERT INTO permission_params (id_company, name) VALUES (:id_company, :name)");
+		$sql->bindValue(':id_company', $id_company);
+		$sql->bindValue(':name', $name);
+		$sql->execute();
+
+	}
+
+	public function delete($id) {
+
+		$sql = $this->db->prepare("DELETE FROM permission_params WHERE id = :id");
+		$sql->bindValue(':id', $id);
+		$sql->execute();
+
+	}
 }

@@ -26,7 +26,7 @@
 			<div class="top_right"><a href="<?php echo BASE_URL.'/login/logout'; ?> ">Sair</a></div>
 			<div class="top_right"><?php echo $viewData['user_email']; ?></div>
 		</div>
-		<div class="area">  <!-- é a area do sistema propriamente dita. Abaixo do Menu Top onde está o usuário e sair -->
+		<div class="area">
 			<?php $this->loadViewInTemplate($viewName, $viewData); ?>
 		</div>
 	</div>

@@ -40,7 +40,12 @@ class permissionsController extends controller {
 
 		if($u->hasPermission('permission_view')){
 			$permissions = new Permissions();
-			
+
+			if(isset($_POST['name']) && !empty($_POST['name'])) {
+				$pname = addslashes($_POST['name']);
+				$permissions->add($pname, $u->getCompany());
+				header("Location: ".BASE_URL.'/permissions');
+			}
 
 			$this->loadTemplate('permissions_add',  $data);
 		} else {
@@ -49,7 +54,23 @@ class permissionsController extends controller {
 	}
 
 	public function delete($id) {
+		$data = array();
+		$u = new Users();
+		$u->setLoggedUser();
+		$company = new Companies($u->getCompany());
+		$data['company_name'] = $company->getName();
+		$data['user_email'] = $u->getEmail();
 
+		if($u->hasPermission('permission_view')){
+			$permissions = new Permissions();
+
+			$permissions->delete($id);
+
+			header("Location: ".BASE_URL.'/permissions');
+			
+		} else {
+			header("Location: ".BASE_URL);
+		} 		
 	}
 
  }
